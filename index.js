@@ -1,4 +1,4 @@
-const dateConversion = require("./date.js")
+const dateConversion = require("./minitask-1.js")
 const readline = require('readline');
 
 const rl = readline.createInterface({
