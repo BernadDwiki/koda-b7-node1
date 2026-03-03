@@ -1,4 +1,4 @@
-const dateConversion = require("./dateInternal.js")
+const dateConversion = require('./dateInternal.js')
 //const dateConversion = require("./date.js")
 const readline = require('readline/promises');
 
