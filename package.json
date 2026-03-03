@@ -5,13 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "lint:init" : "eslint --init",
+    "lint:fix" : "eslint --fix",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "type": "commonjs",
   "dependencies": {
     "moment": "^2.30.1",
     "readline": "^1.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^10.0.2"
   }
 }
