@@ -1,17 +1,21 @@
-const dateConversion = require("./minitask-1.js")
-const readline = require('readline');
+const dateConversion = require("./dateInternal.js")
+//const dateConversion = require("./date.js")
+const readline = require('readline/promises');
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout
-});
+const { stdin: input, stdout: output } = require('process');
 
-const askQuestion = (query) => new Promise((resolve) => rl.question(query, resolve));
+async function ambilInput() {
+  const rl = readline.createInterface({ input, output });
 
-async function main() {
-  const tanggal = await askQuestion('Masukkan tanggal : ');
-  console.log(dateConversion(tanggal))
-  rl.close();
+  try {
+    const tanggal = await rl.question('Masukkan tanggal : ');
+    console.log(dateConversion(tanggal))
+  } catch (err) {
+    console.error(err);
+  } finally {
+    rl.close();
+  }
 }
 
-main();
+ambilInput();
+
