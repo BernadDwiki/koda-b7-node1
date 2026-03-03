@@ -1,8 +1,8 @@
 let regexStrip = /^\d{2}-\d{2}-\d{4}$/;
 
 function dateConversion(tanggal){
-    let [day, month, year] = tanggal.split('-');
     if(regexStrip.test(tanggal)){
+        let [day, month, year] = tanggal.split('-');
         let formattedDate = `${day}/${month}/${year}`;
         return formattedDate;
     } else{
