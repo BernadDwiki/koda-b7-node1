@@ -1,5 +1,5 @@
-const dateConversion = require('./dateInternal.js')
-//const dateConversion = require("./date.js")
+const dateConversion = require('./minitask-2.js')
+//const dateConversion = require("./minitask-1.js")
 const readline = require('readline/promises');
 
 const { stdin: input, stdout: output } = require('process');
